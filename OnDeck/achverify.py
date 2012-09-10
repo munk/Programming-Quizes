@@ -115,11 +115,12 @@ def main():
         if goodRecord:
             webinfo = webinfo + '<p style="color:green"> Valid Record: ' + t + '</p>'
         else:
-            webinfo = webinfo + '<p style="color:red"> ERROR: ' + t + ' <br /> Record should have been: ' + s + '</p>'
+            webinfo = webinfo + '<p style="color:red"> RECORD ERROR: ' + t + ' <br /> STANDARD RCD: ' + s + '</p>'
     webinfo = webinfo + '</body></html>'
     with open('index.html', 'w') as f:
         f.write(webinfo)
 
     startServer()
     
-
+if __name__ == '__main__':
+    main()
